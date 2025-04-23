@@ -1,6 +1,5 @@
-import React from "react";
-import { MdOutlineNightlight } from "react-icons/md";
 import Logo from "./logo";
+import ThemeToggle from "./theme-toggle";
 
 export default function Navbar() {
   return (
@@ -17,7 +16,7 @@ export default function Navbar() {
         <button className="hover:bg-gray-600 px-5 border rounded-full h-full cursor-pointer">
           Blog
         </button>
-        <MdOutlineNightlight className="w-7 h-7" />
+        <ThemeToggle />
       </div>
     </header>
   );
