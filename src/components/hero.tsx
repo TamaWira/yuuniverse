@@ -17,11 +17,11 @@ export default function Hero() {
 
       {/* Content */}
       <div className="top-10 lg:top-20 lg:left-1/2 z-20 absolute text-center lg:-translate-x-1/2">
-        <p className="text-xl">Hi there, I&apos;m Bayu</p>
-        <h1 className="font-bold text-2xl lg:text-4xl">
+        <p className="font-light text-xl">Hi there, I&apos;m Bayu</p>
+        <h1 className="my-1 font-bold text-3xl lg:text-4xl">
           Welcome to my YuuNiverse
         </h1>
-        <p className="lg:text-xl">
+        <p className="mx-10 font-light lg:text-xl">
           Where curiosity meets clean code, and every click tells a story.
         </p>
         <button className="hover:bg-black dark:hover:bg-white mt-5 px-3 py-1 border dark:border-2 dark:border-white border-black rounded-full hover:text-white dark:hover:text-black transition-all">
