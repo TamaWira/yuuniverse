@@ -10,7 +10,7 @@ export default function Home() {
         <div className="flex flex-col h-[calc(100vh-70px)]">
           <Hero />
         </div>
-        <div className="h-screen">
+        <div className="px-5 h-screen">
           <AboutMe />
         </div>
       </main>
