@@ -3,21 +3,21 @@ import ThemeToggle from "./theme-toggle";
 
 export default function Navbar() {
   return (
-    <header className="hidden items-center lg:grid grid-cols-3 p-2 px-5">
-      <Logo />
-      <nav className="flex items-center mx-auto my-auto p-3 px-5 border rounded-full w-fit h-10">
-        <ul className="flex gap-4">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
-      <div className="flex justify-self-end items-center gap-4 my-auto h-10">
-        <button className="hover:bg-gray-600 px-5 border rounded-full h-full cursor-pointer">
-          Blog
-        </button>
-        <ThemeToggle />
+    <header className="hidden lg:flex justify-between items-center p-2 px-5">
+      <div className="flex items-center gap-3">
+        <Logo />
+        <p className="font-bold text-xl">YuuNiverse</p>
       </div>
+      <nav className="top-3 right-6 z-40 fixed flex items-center gap-3">
+        <ul className="flex items-center gap-4 bg-white shadow-xl p-3 px-5 border rounded-full h-9 text-black">
+          <li>Home</li>
+          <li>About Me</li>
+          <li>Projects</li>
+          <li>Blog</li>
+          <li>Contact Me</li>
+        </ul>
+        <ThemeToggle />
+      </nav>
     </header>
   );
 }
