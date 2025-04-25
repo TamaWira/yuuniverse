@@ -1,14 +1,10 @@
 import BlurText from "@/blocks/TextAnimations/BlurText/BlurText";
+import SectionHeader from "./section-header";
 
 export default function AboutMe() {
   return (
     <section id="about-me" className="flex flex-col h-full">
-      <div className="flex items-center gap-2">
-        <h2 className="bg-white/5 px-5 py-1 border-2 rounded-full font-extralight text-sm lg:text-xl">
-          About Me
-        </h2>
-        <div className="flex-1 my-auto border-b" />
-      </div>
+      <SectionHeader>About Me</SectionHeader>
       <div className="lg:flex lg:flex-col lg:flex-1 lg:justify-center mt-5 lg:px-20 text-md lg:text-2xl">
         <BlurText
           text="Hey, I'm Bayu 👋"
@@ -50,17 +46,6 @@ export default function AboutMe() {
           className="mb-8"
         />
       </div>
-      {/* <ScrollReveal
-        baseOpacity={0}
-        enableBlur={true}
-        baseRotation={0}
-        blurStrength={10}
-        containerClassName="px-5 lg:px-32 text-center"
-      >
-        When does a man die? When he is hit by a bullet? No! When he suffers a
-        disease? No! When he ate a soup made out of a poisonous mushroom? No! A
-        man dies when he is forgotten!
-      </ScrollReveal> */}
     </section>
   );
 }
