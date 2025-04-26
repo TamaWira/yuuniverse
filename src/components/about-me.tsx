@@ -20,7 +20,6 @@ const aboutMeVariants: Variants = {
 export default function AboutMe() {
   return (
     <section id="about-me" className="relative flex items-center h-full">
-      {/* <SectionHeader>About Me</SectionHeader> */}
       <motion.div
         initial="hidden"
         whileInView="visible"
