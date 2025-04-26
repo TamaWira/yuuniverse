@@ -20,7 +20,7 @@ export default function Skills() {
         </div>
 
         {/* Right */}
-        <div className="border">Right</div>
+        <div className="border"></div>
       </div>
     </section>
   );
