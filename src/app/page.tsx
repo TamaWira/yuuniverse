@@ -1,6 +1,7 @@
 import AboutMe from "@/components/about-me";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
+import Skills from "@/components/skills";
 
 export default function Home() {
   return (
@@ -12,6 +13,9 @@ export default function Home() {
         </div>
         <div className="px-5 h-screen">
           <AboutMe />
+        </div>
+        <div className="px-5 h-screen">
+          <Skills />
         </div>
       </main>
     </div>
