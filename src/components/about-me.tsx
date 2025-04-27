@@ -2,12 +2,12 @@
 
 import { motion, Variants } from "framer-motion";
 
-const aboutMeVariants: Variants = {
+const itemVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 20,
   },
-  visible: {
+  show: {
     opacity: 1,
     y: 0,
     transition: {
@@ -17,15 +17,28 @@ const aboutMeVariants: Variants = {
   },
 };
 
+const containerVariants: Variants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
+
 export default function AboutMe() {
   return (
-    <section id="about-me" className="relative flex items-center h-full">
+    <motion.section
+      id="about-me"
+      className="relative flex items-center h-full"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.75 }}
+    >
       {/* Content */}
       <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: "all", once: true, margin: "0px 0px -100px 0px" }}
-        variants={aboutMeVariants}
+        variants={itemVariants}
         className="md:flex-1 md:px-32 font-light text-md md:text-3xl text-center"
       >
         <p>
@@ -60,24 +73,7 @@ export default function AboutMe() {
 
       {/* Floating Icons 1 */}
       <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: "all", once: true, margin: "0px 0px -100px 0px" }}
-        variants={{
-          hidden: {
-            opacity: 0,
-            y: 20,
-          },
-          visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-              duration: 0.5,
-              ease: "easeOut",
-              delay: 0.5, // 0.5 second delay after main content
-            },
-          },
-        }}
+        variants={itemVariants}
         className="top-[10%] md:top-[10%] -left-[2%] md:-left-[1%] -z-10 absolute"
       >
         <div className="-z-10 inset-0 bg-gray-700 blur-2xl md:blur-3xl rounded-full w-20 md:w-32 h-20 md:h-32" />
@@ -88,24 +84,7 @@ export default function AboutMe() {
 
       {/* Floating Icons 2 */}
       <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: "all", once: true, margin: "0px 0px 0px 0px" }}
-        variants={{
-          hidden: {
-            opacity: 0,
-            y: 20,
-          },
-          visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-              duration: 0.5,
-              ease: "easeOut",
-              delay: 0.75, // 1.0 second delay (0.5s after first icon)
-            },
-          },
-        }}
+        variants={itemVariants}
         className="top-[75%] -right-[3%] md:right-[3%] -z-10 absolute"
       >
         <div className="-z-10 inset-0 bg-gray-700 blur-2xl md:blur-3xl rounded-full w-20 md:w-32 h-20 md:h-32" />
@@ -113,6 +92,6 @@ export default function AboutMe() {
           <div className="flex justify-center items-center text-2xl">⚛️</div>
         </div>
       </motion.div>
-    </section>
+    </motion.section>
   );
 }

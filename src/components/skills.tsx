@@ -1,26 +1,27 @@
-import React from "react";
-import SectionHeader from "./section-header";
+"use client";
+
+import { useState } from "react";
+import { SkillList } from "./skill-list";
+import { SkillContent } from "./skill-content";
 
 export default function Skills() {
-  return (
-    <section id="skills" className="flex flex-col h-full">
-      <SectionHeader>Skills</SectionHeader>
-      <div className="lg:flex-1 grid grid-cols-2 mt-10">
-        {/* Left */}
-        <div className="flex flex-col justify-center">
-          <h2>My roles are:</h2>
-          <ul>
-            <li>
-              <button>Frontend Developer</button>
-            </li>
-            <li>
-              <button>Backend Developer</button>
-            </li>
-          </ul>
-        </div>
+  const skills = ["Frontend", "Backend", "Database", "Deployment"];
+  const [selectedSkillIndex, setSelectedSkillIndex] = useState(0);
 
-        {/* Right */}
-        <div className="border"></div>
+  return (
+    <section id="skills" className="flex flex-col rounded-lg lg:h-full">
+      <div className="my-10 text-center">
+        <h2 className="font-bold text-3xl">What I Do?</h2>
+        <p>Well, basically everyting 😁</p>
+      </div>
+
+      <div className="flex flex-col-reverse flex-1 items-center gap-10 lg:gap-2 lg:grid lg:grid-cols-3 h-full">
+        <SkillList
+          skills={skills}
+          selectedSkillIndex={selectedSkillIndex}
+          setSelectedSkillIndex={setSelectedSkillIndex}
+        />
+        <SkillContent skills={skills} selectedSkillIndex={selectedSkillIndex} />
       </div>
     </section>
   );

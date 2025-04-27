@@ -14,7 +14,7 @@ export default function Home() {
         <div className="px-5 h-screen">
           <AboutMe />
         </div>
-        <div className="px-5 h-screen">
+        <div className="p-5 h-screen">
           <Skills />
         </div>
       </main>
