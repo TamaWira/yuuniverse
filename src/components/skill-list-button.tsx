@@ -19,7 +19,7 @@ export function SkillListButton({
       key={skill}
       onClick={() => setSelectedSkillIndex(index)}
       className={cn(
-        "group flex-1 bg-black/10 dark:bg-white/10 rounded-md font-bold hover:ring-[#96b494]/50 transition-all",
+        "group flex-1 bg-black/10 dark:bg-white/10 rounded-xs font-bold hover:ring-[#96b494]/50 transition-all h-20 p-3",
         {
           "ring-2 ring-[#96b494]/50 ": selectedSkillIndex === index,
         }
