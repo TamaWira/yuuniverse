@@ -20,17 +20,17 @@ const aboutMeVariants: Variants = {
 export default function AboutMe() {
   return (
     <section id="about-me" className="relative flex items-center h-full">
-      {/* <SectionHeader>About Me</SectionHeader> */}
+      {/* Content */}
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: "all", once: true, margin: "0px 0px -100px 0px" }}
         variants={aboutMeVariants}
-        className="lg:flex-1 lg:px-32 font-light text-md lg:text-3xl text-center"
+        className="md:flex-1 md:px-32 font-light text-md md:text-3xl text-center"
       >
         <p>
           I&apos;m a software engineer with{" "}
-          <span className="lg:font-medium font-bold text-[#576856] dark:text-[#90ab8f] underline">
+          <span className="md:font-medium font-bold text-[#576856] dark:text-[#90ab8f] underline">
             1 year of experience
           </span>{" "}
           and a passion for building clean, responsive, and user-friendly
@@ -40,15 +40,15 @@ export default function AboutMe() {
         <br />
         <p>
           I mostly work with{" "}
-          <span className="lg:font-medium font-bold text-[#576856] dark:text-[#90ab8f] underline">
+          <span className="md:font-medium font-bold text-[#576856] dark:text-[#90ab8f] underline">
             Next.js
           </span>
           ,{" "}
-          <span className="lg:font-medium font-bold text-[#576856] dark:text-[#90ab8f] underline">
+          <span className="md:font-medium font-bold text-[#576856] dark:text-[#90ab8f] underline">
             Tailwind CSS
           </span>
           , and{" "}
-          <span className="lg:font-medium font-bold text-[#576856] dark:text-[#90ab8f] underline">
+          <span className="md:font-medium font-bold text-[#576856] dark:text-[#90ab8f] underline">
             TypeScript
           </span>
           —tools I love for how flexible and powerful they are. Whether
@@ -63,11 +63,25 @@ export default function AboutMe() {
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: "all", once: true, margin: "0px 0px -100px 0px" }}
-        variants={aboutMeVariants}
-        className="top-[10%] lg:top-[10%] -left-[2%] lg:left-[5%] -z-10 absolute"
+        variants={{
+          hidden: {
+            opacity: 0,
+            y: 20,
+          },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.5,
+              ease: "easeOut",
+              delay: 0.5, // 0.5 second delay after main content
+            },
+          },
+        }}
+        className="top-[10%] md:top-[10%] -left-[2%] md:-left-[1%] -z-10 absolute"
       >
-        <div className="-z-10 inset-0 bg-gray-700 blur-2xl lg:blur-3xl rounded-full w-20 lg:w-32 h-20 lg:h-32" />
-        <div className="top-1/2 left-1/2 absolute flex justify-center items-center bg-gray-500/10 border rounded-lg w-10 h-10 -rotate-30 -translate-x-1/2 -translate-y-1/2">
+        <div className="-z-10 inset-0 bg-gray-700 blur-2xl md:blur-3xl rounded-full w-20 md:w-32 h-20 md:h-32" />
+        <div className="top-1/2 left-1/2 absolute flex justify-center items-center bg-gray-500/10 shadow-xl border rounded-lg w-10 h-10 -rotate-30 -translate-x-1/2 -translate-y-1/2">
           <div className="flex justify-center items-center text-xl">⚛️</div>
         </div>
       </motion.div>
@@ -76,13 +90,27 @@ export default function AboutMe() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: "all", once: true, margin: "0px 0px -100px 0px" }}
-        variants={aboutMeVariants}
-        className="top-[75%] lg:top-[70%] -right-[3%] lg:right-[3%] -z-10 absolute"
+        viewport={{ amount: "all", once: true, margin: "0px 0px 0px 0px" }}
+        variants={{
+          hidden: {
+            opacity: 0,
+            y: 20,
+          },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.5,
+              ease: "easeOut",
+              delay: 0.75, // 1.0 second delay (0.5s after first icon)
+            },
+          },
+        }}
+        className="top-[75%] -right-[3%] md:right-[3%] -z-10 absolute"
       >
-        <div className="-z-10 inset-0 bg-gray-700 blur-2xl lg:blur-3xl rounded-full w-20 lg:w-32 h-20 lg:h-32" />
-        <div className="top-1/2 left-1/2 absolute flex justify-center items-center bg-gray-500/10 border rounded-lg w-10 h-10 rotate-30 -translate-x-1/2 -translate-y-1/2">
-          <div className="flex justify-center items-center text-xl">⚛️</div>
+        <div className="-z-10 inset-0 bg-gray-700 blur-2xl md:blur-3xl rounded-full w-20 md:w-32 h-20 md:h-32" />
+        <div className="top-1/2 left-1/2 absolute flex justify-center items-center bg-gray-500/10 shadow-xl border rounded-lg w-12 h-12 rotate-30 -translate-x-1/2 -translate-y-1/2">
+          <div className="flex justify-center items-center text-2xl">⚛️</div>
         </div>
       </motion.div>
     </section>

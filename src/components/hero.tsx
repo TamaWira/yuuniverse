@@ -1,16 +1,11 @@
-import Image from "next/image";
-import React from "react";
+"use client";
+
+import HeroImage from "./hero-image";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-1 justify-center bg-[#576856] rounded-xl w-full h-full overflow-hidden">
-      <Image
-        src="/hero-image.png"
-        alt="Hero"
-        className="object-cover"
-        fill
-        priority
-      />
+    <section className="relative flex flex-1 justify-center rounded-xl w-full h-full overflow-hidden">
+      <HeroImage />
 
       {/* Gradient Overlay */}
       <div className="z-10 absolute inset-0 bg-gradient-to-b from-white dark:from-black via-white/20 dark:via-black/20 to-transparent h-[80%] pointer-events-none" />

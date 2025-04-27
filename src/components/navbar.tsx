@@ -45,7 +45,7 @@ export default function Navbar() {
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden top-3 right-6 z-40 fixed lg:flex items-center gap-3">
+      <nav className="hidden top-3 right-6 z-40 fixed md:flex items-center gap-3">
         <ul className="flex items-center gap-4 bg-white shadow-xl p-3 px-5 border rounded-full h-9 text-black">
           {links.map((link) => (
             <li key={link.name}>
@@ -59,7 +59,7 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Navigation */}
-      <nav className="lg:hidden flex">
+      <nav className="md:hidden flex">
         <Drawer direction="right">
           <DrawerTrigger asChild>
             <button>
