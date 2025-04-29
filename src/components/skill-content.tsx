@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion, Variants, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 type Props = {
   skills: string[];
@@ -13,25 +14,93 @@ const content = [
     title: "Frontend",
     description:
       "I bring ideas to life through clean, responsive, and dynamic user interfaces. My frontend development focuses on creating experiences that are not only beautiful but also intuitive and accessible across devices.",
-    stacks: ["React", "Next.js", "Tailwind CSS", "Vite", "TypeScript"],
+    stacks: [
+      {
+        name: "React",
+        icon: "/react-icon.png",
+      },
+      {
+        name: "Next.js",
+        icon: "/nextjs-icon.png",
+      },
+      {
+        name: "Typescript",
+        icon: "/typescript_icon.webp",
+      },
+      {
+        name: "React Native",
+        icon: "/typescript_icon.webp",
+      },
+    ],
   },
   {
     title: "Backend",
     description:
       "I develop efficient, secure, and scalable backends that power modern web applications. From building APIs to server-side rendering, I focus on writing clean and maintainable code that connects the frontend to the server seamlessly.",
-    stacks: ["Node.js", "Express.js", "Web Sockets"],
+    stacks: [
+      {
+        name: "React",
+        icon: "/react-icon.png",
+      },
+      {
+        name: "Next.js",
+        icon: "/nextjs-icon.png",
+      },
+      {
+        name: "Typescript",
+        icon: "/typescript_icon.webp",
+      },
+      {
+        name: "React Native",
+        icon: "/typescript_icon.webp",
+      },
+    ],
   },
   {
     title: "Database",
     description:
       "I design and manage database solutions that are fast, reliable, and scalable. Whether it's structuring the data model or optimizing queries, I ensure data flows correctly to support the needs of the application.",
-    stacks: ["SQL", "PostgreSQL", "MongoDB", "Supabase"],
+    stacks: [
+      {
+        name: "React",
+        icon: "/react-icon.png",
+      },
+      {
+        name: "Next.js",
+        icon: "/nextjs-icon.png",
+      },
+      {
+        name: "Typescript",
+        icon: "/typescript_icon.webp",
+      },
+      {
+        name: "React Native",
+        icon: "/typescript_icon.webp",
+      },
+    ],
   },
   {
     title: "Deployment",
     description:
       "I handle deployments to make sure that what I build reaches the world reliably and efficiently. I optimize for performance, set up CI/CD workflows, and leverage cloud platforms for smooth scaling and delivery.",
-    stacks: ["Vercel", "Fly.io", "Railway", "Netlify", "AWS"],
+    stacks: [
+      {
+        name: "React",
+        icon: "/react-icon.png",
+      },
+      {
+        name: "Next.js",
+        icon: "/nextjs-icon.png",
+      },
+      {
+        name: "Typescript",
+        icon: "/typescript_icon.webp",
+      },
+      {
+        name: "React Native",
+        icon: "/typescript_icon.webp",
+      },
+    ],
   },
 ];
 
@@ -126,7 +195,7 @@ export function SkillContent({ selectedSkillIndex }: Props) {
   };
 
   return (
-    <div className="col-span-2 col-start-2 p-2 lg:p-10 rounded-md w-full h-full overflow-hidden">
+    <div className="col-span-2 col-start-2 px-2 lg:px-20 rounded-md w-full h-full overflow-hidden">
       <AnimatePresence mode="wait" custom={{ direction, isMobile }}>
         <motion.div
           key={selectedSkillIndex}
@@ -155,9 +224,15 @@ export function SkillContent({ selectedSkillIndex }: Props) {
                   variants={stacksItemVariant}
                   className="group relative bg-white/10 p-3 rounded-md aspect-square font-medium text-white transition-all hover:-translate-y-2"
                 >
-                  <p className="top-1/2 left-1/2 absolute text-center -translate-x-1/2 -translate-y-1/2">
-                    {stack}
-                  </p>
+                  <div className="top-1/2 left-1/2 absolute text-center -translate-x-1/2 -translate-y-1/2">
+                    <Image
+                      src={stack.icon}
+                      alt={stack.name}
+                      width={200}
+                      height={200}
+                    />
+                    <p>{stack.name}</p>
+                  </div>
                   <div className="-top-2 -left-2 z-10 absolute bg-zinc-800 opacity-0 group-hover:opacity-1 shadow-xl rounded-full ring-2 ring-black/10 w-5 h-5" />
                 </motion.li>
               ))}

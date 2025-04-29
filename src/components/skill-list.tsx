@@ -13,7 +13,7 @@ export function SkillList({
   setSelectedSkillIndex,
 }: Props) {
   return (
-    <div className="flex lg:flex-col gap-2 p-2 h-full text-xs">
+    <div className="flex lg:flex-col gap-2 p-2 h-full text-xs lg:text-base">
       {skills.map((skill, index) => (
         <SkillListButton
           key={skill}
