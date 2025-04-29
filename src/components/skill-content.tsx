@@ -216,7 +216,7 @@ export function SkillContent({ selectedSkillIndex }: Props) {
               variants={stacksContainerVariant}
               animate="show"
               initial="hidden"
-              className="gap-3 grid grid-cols-3 lg:grid-cols-5 h-full"
+              className="gap-3 grid grid-cols-4 lg:grid-cols-5 h-full"
             >
               {currentSkill.stacks.map((stack, index) => (
                 <motion.li
@@ -224,16 +224,16 @@ export function SkillContent({ selectedSkillIndex }: Props) {
                   variants={stacksItemVariant}
                   className="group relative bg-white/10 p-3 rounded-md aspect-square font-medium text-white transition-all hover:-translate-y-2"
                 >
-                  <div className="top-1/2 left-1/2 absolute text-center -translate-x-1/2 -translate-y-1/2">
+                  <div className="top-1/2 left-1/2 absolute space-y-1 text-center -translate-x-1/2 -translate-y-1/2">
                     <Image
+                      className="mx-auto"
                       src={stack.icon}
                       alt={stack.name}
-                      width={200}
-                      height={200}
+                      width={50}
+                      height={50}
                     />
-                    <p>{stack.name}</p>
+                    <p className="text-xs lg:text-base">{stack.name}</p>
                   </div>
-                  <div className="-top-2 -left-2 z-10 absolute bg-zinc-800 opacity-0 group-hover:opacity-1 shadow-xl rounded-full ring-2 ring-black/10 w-5 h-5" />
                 </motion.li>
               ))}
             </motion.ul>
