@@ -9,7 +9,10 @@ export default function Skills() {
   const [selectedSkillIndex, setSelectedSkillIndex] = useState(0);
 
   return (
-    <section id="skills" className="flex flex-col rounded-lg lg:h-full">
+    <section
+      id="skills"
+      className="flex flex-col border-2 rounded-lg lg:h-full"
+    >
       <div className="my-10 text-center">
         <h2 className="font-bold text-3xl">What I Do?</h2>
         <p>Well, basically everyting 😁</p>
