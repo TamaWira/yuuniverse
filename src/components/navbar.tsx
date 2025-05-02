@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Logo from "./logo";
 import MobileThemeToggle from "./mobile-theme-toggle";
 import ThemeToggle from "./theme-toggle";
@@ -37,16 +40,53 @@ const links = [
 ];
 
 export default function Navbar() {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+
+      // Make navbar visible at the very top of the page
+      if (currentScrollPos <= 10) {
+        setVisible(true);
+        setPrevScrollPos(currentScrollPos);
+        return;
+      }
+
+      // Determine scroll direction
+      const isScrollingDown = prevScrollPos < currentScrollPos;
+
+      setVisible(!isScrollingDown);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
+
   return (
-    <header className="flex justify-between items-center p-2 px-5">
-      <div className="flex items-center gap-3">
+    <header
+      className={`sticky overflow-hidden top-0 z-50 flex justify-between items-center p-2 px-5 transition-transform duration-300 ${
+        visible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
+      <div
+        className={`z-[60] absolute inset-0 bg-red-500 ${
+          prevScrollPos > 30
+            ? "bg-white/80 dark:bg-[#576856]/30 backdrop-blur-md"
+            : "bg-transparent"
+        }`}
+      />
+
+      <div className="z-[70] flex items-center gap-3">
         <Logo />
         <p className="font-bold text-xl">YuuNiverse</p>
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden top-3 right-6 z-40 fixed md:flex items-center gap-3">
-        <ul className="flex items-center gap-4 bg-white dark:bg-[#576856] shadow-xl p-3 px-5 border rounded-full h-9 text-black dark:text-white">
+      <nav className="hidden z-[70] md:flex items-center gap-3">
+        <ul className="flex items-center gap-4 p-3 px-5 h-9 text-black dark:text-white">
           {links.map((link) => (
             <li key={link.name}>
               <a href={link.href} className="hover:text-black transition-all">
@@ -59,14 +99,14 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Navigation */}
-      <nav className="md:hidden flex">
+      <nav className="md:hidden z-[70] flex">
         <Drawer direction="right">
           <DrawerTrigger asChild>
             <button>
               <Menu />
             </button>
           </DrawerTrigger>
-          <DrawerContent className="bg-white rounded-s-3xl">
+          <DrawerContent className="bg-white dark:bg-gray-900 rounded-s-3xl">
             {/* Hidden header for accessibility */}
             <DrawerHeader className="flex flex-row justify-between">
               <div>
