@@ -21,6 +21,7 @@ const containerVariants: Variants = {
   hidden: {},
   show: {
     transition: {
+      duration: 0,
       staggerChildren: 0.5,
     },
   },
@@ -34,7 +35,7 @@ export default function AboutMe() {
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.75 }}
+      viewport={{ once: true, amount: 0.7 }}
     >
       {/* Content */}
       <motion.div
