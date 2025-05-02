@@ -2,6 +2,12 @@ import Image from "next/image";
 
 export default function Logo() {
   return (
-    <Image src="/logo.png" alt="logo" width={40} height={40} className="logo" />
+    <Image
+      src="/logo.png"
+      alt="logo"
+      width={40}
+      height={40}
+      className="max-w-7 md:max-w-full object-cover"
+    />
   );
 }

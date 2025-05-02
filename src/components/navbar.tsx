@@ -48,7 +48,7 @@ export default function Navbar() {
       const currentScrollPos = window.scrollY;
 
       // Make navbar visible at the very top of the page
-      if (currentScrollPos <= 10) {
+      if (currentScrollPos <= 30) {
         setVisible(true);
         setPrevScrollPos(currentScrollPos);
         return;
@@ -81,7 +81,7 @@ export default function Navbar() {
 
       <div className="z-[70] flex items-center gap-3">
         <Logo />
-        <p className="font-bold text-xl">YuuNiverse</p>
+        <p className="font-bold text-base md:text-xl">YuuNiverse</p>
       </div>
 
       {/* Desktop Navigation */}
@@ -106,7 +106,7 @@ export default function Navbar() {
               <Menu />
             </button>
           </DrawerTrigger>
-          <DrawerContent className="bg-white dark:bg-gray-900 rounded-s-3xl">
+          <DrawerContent className="bg-white dark:bg-[#263026] border-none rounded-s-3xl">
             {/* Hidden header for accessibility */}
             <DrawerHeader className="flex flex-row justify-between">
               <div>
