@@ -8,7 +8,7 @@ export default function Hero() {
       <HeroImage />
 
       {/* Gradient Overlay */}
-      <div className="z-10 absolute inset-0 bg-gradient-to-b from-white dark:from-[#171D17] via-white/20 dark:via-black/20 to-transparent h-[80%] pointer-events-none" />
+      <div className="z-10 absolute inset-0 bg-gradient-to-b from-[#F1F1EE] dark:from-[#171D17] via-white/20 dark:via-black/20 to-transparent h-[80%] pointer-events-none" />
 
       {/* Content */}
       <div className="top-3 md:top-10 lg:top-5 lg:left-1/2 z-20 absolute lg:w-3/4 text-center lg:-translate-x-1/2">

@@ -46,7 +46,7 @@ export default function Navbar() {
 
       {/* Desktop Navigation */}
       <nav className="hidden top-3 right-6 z-40 fixed md:flex items-center gap-3">
-        <ul className="flex items-center gap-4 bg-white shadow-xl p-3 px-5 border rounded-full h-9 text-black">
+        <ul className="flex items-center gap-4 bg-white dark:bg-[#576856] shadow-xl p-3 px-5 border rounded-full h-9 text-black dark:text-white">
           {links.map((link) => (
             <li key={link.name}>
               <a href={link.href} className="hover:text-black transition-all">
@@ -66,7 +66,7 @@ export default function Navbar() {
               <Menu />
             </button>
           </DrawerTrigger>
-          <DrawerContent className="rounded-s-3xl">
+          <DrawerContent className="bg-white rounded-s-3xl">
             {/* Hidden header for accessibility */}
             <DrawerHeader className="flex flex-row justify-between">
               <div>
