@@ -8,7 +8,7 @@ export default function Hero() {
       <HeroImage />
 
       {/* Gradient Overlay */}
-      <div className="z-10 absolute inset-0 bg-gradient-to-b from-white dark:from-black via-white/20 dark:via-black/20 to-transparent h-[80%] pointer-events-none" />
+      <div className="z-10 absolute inset-0 bg-gradient-to-b from-white dark:from-[#171D17] via-white/20 dark:via-black/20 to-transparent h-[80%] pointer-events-none" />
 
       {/* Content */}
       <div className="top-3 md:top-10 lg:top-5 lg:left-1/2 z-20 absolute lg:w-3/4 text-center lg:-translate-x-1/2">
@@ -20,7 +20,7 @@ export default function Hero() {
           user-centric design. Let&apos;s build something that works —
           beautifully.
         </p>
-        <button className="bg-white hover:bg-black active:bg-black dark:hover:bg-white mt-5 px-3 py-1 border dark:border-2 dark:border-white border-black rounded-full ring-2 ring-black/10 hover:text-white active:text-white dark:hover:text-black text-sm lg:text-base transition-all">
+        <button className="bg-white hover:bg-black active:bg-black dark:bg-[#576856] dark:hover:bg-white mt-5 px-3 py-1 border dark:border-white border-black rounded-full ring-2 ring-black/10 hover:text-white active:text-white dark:hover:text-black dark:text-white text-sm lg:text-base transition-all">
           Contact Me
         </button>
       </div>
