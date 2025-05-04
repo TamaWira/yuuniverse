@@ -15,7 +15,7 @@ export default function Hero() {
         <h1 className="my-1 font-abhaya font-bold text-3xl lg:text-6xl">
           Crafting Code With Purpose, Passion, & Precision
         </h1>
-        <p className="mx-10 font-light text-sm lg:text-xl">
+        <p className="mx-10 font-light text-sm md:text-xl">
           From landing pages to full-stack platforms, I deliver clean code and
           user-centric design. Let&apos;s build something that works —
           beautifully.

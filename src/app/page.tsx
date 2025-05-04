@@ -11,7 +11,7 @@ export default function Home() {
         <div className="flex flex-col p-2 h-[calc(100vh-55px)] xl:max-h-[1280px]">
           <Hero />
         </div>
-        <div className="py-10 h-screen">
+        <div className="py-3 md:py-10 h-screen">
           <AboutMe />
         </div>
         <div className="p-5 h-screen">

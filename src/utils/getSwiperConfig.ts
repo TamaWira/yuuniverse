@@ -4,10 +4,10 @@ import { Pagination } from "swiper/modules";
 export const getSwiperConfig = (items: typeof TIMELINES) => ({
     modules: [Pagination],
     pagination: true,
-    spaceBetween: 50,
-    className: "flex flex-1 justify-between w-full h-full",
+    className: "flex flex-1 justify-between w-full md:h-full",
     breakpoints: {
       768: {
+        spaceBetween: 50,
         slidesPerView: 2.5,
         slidesOffsetBefore: 150,
         slidesOffsetAfter: 150,
@@ -28,8 +28,6 @@ export const getSwiperConfig = (items: typeof TIMELINES) => ({
       },
       0: {
         slidesPerView: 1,
-        slidesOffsetBefore: 20,
-        slidesOffsetAfter: 20,
         spaceBetween: 30,
         pagination: {
           clickable: true,
