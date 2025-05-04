@@ -1,0 +1,18 @@
+/* Add this to your global.css or create a new CSS module */
+.timeline-swiper .swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet-timeline {
+  padding-inline: 10px;
+  padding-block: 5px;
+  background-color: #576856;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+}
+
+.swiper-pagination-bullet-active-timeline {
+  opacity: 1;
+}
