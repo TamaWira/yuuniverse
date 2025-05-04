@@ -5,13 +5,13 @@ import Skills from "@/components/skills";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col mx-auto max-w-[1280px] min-h-screen">
       <Navbar />
-      <main className="flex flex-col flex-1 gap-10 p-2">
-        <div className="flex flex-col h-[calc(100vh-70px)]">
+      <main className="flex flex-col flex-1 gap-10">
+        <div className="flex flex-col p-2 h-[calc(100vh-55px)] xl:max-h-[1280px]">
           <Hero />
         </div>
-        <div className="px-5 h-screen">
+        <div className="py-3 md:py-10 h-screen">
           <AboutMe />
         </div>
         <div className="p-5 h-screen">
