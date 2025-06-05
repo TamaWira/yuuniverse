@@ -2,6 +2,9 @@ import AboutMe from "@/components/about-me";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import { Skills } from "@/components/features/skills/skills-section";
+import { Projects } from "@/components/features/projects/projects";
+import { CTA } from "@/components/features/cta/cta";
+import { Footer } from "@/components/footer/footer";
 
 export default function Home() {
   return (
@@ -17,7 +20,16 @@ export default function Home() {
         <div className="px-3 md:px-10 py-10">
           <Skills />
         </div>
+        <div className="flex items-center px-3 md:px-10 py-10 min-h-screen">
+          <Projects />
+        </div>
+        <div className="px-3 md:px-10 py-10">
+          <CTA />
+        </div>
       </main>
+      <div className="px-3 md:px-10 py-10">
+        <Footer />
+      </div>
     </div>
   );
 }
