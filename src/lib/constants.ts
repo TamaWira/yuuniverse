@@ -2,7 +2,6 @@ import { Skill } from "./types";
 
 export const skills: Skill[] = [
   {
-    coverImage: "",
     title: "Frontend",
     description: "I build interactive, accessible, and performant UIs.",
     tools: [
@@ -18,7 +17,6 @@ export const skills: Skill[] = [
     ],
   },
   {
-    coverImage: "",
     title: "Backend",
     description: "",
     tools: [
@@ -31,7 +29,6 @@ export const skills: Skill[] = [
     ],
   },
   {
-    coverImage: "",
     title: "Tools & Others",
     description: "",
     tools: [

@@ -4,7 +4,6 @@ export type Tool = {
 };
 
 export type Skill = {
-  coverImage: string;
   title: string;
   description: string;
   tools: Tool[];
