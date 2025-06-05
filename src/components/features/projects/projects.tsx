@@ -6,24 +6,28 @@ import Heading from "@/components/heading";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
-    coverImage: "",
+    coverImage: "/fooloos.png",
     title: "Fooloos | Personal Finance Tracker",
     description:
       "A full-featured online store with product management, cart functionality, and secure checkout.",
     stack: ["React", "Next.js"],
-    liveLink: "",
+    liveLink: "https://fooloos.vercel.app",
+    isPublic: false,
     githubLink: "",
   },
   {
-    coverImage: "",
+    coverImage: "/kaboor.png",
     title: "Kaboor | Online Travel Agent",
     description:
       "A full-featured online store with product management, cart functionality, and secure checkout.",
     stack: ["React", "Next.js"],
     liveLink: "",
+    isPublic: true,
     githubLink: "",
   },
 ];
@@ -77,7 +81,14 @@ export function Projects() {
             className="dark:bg-[#576856] pt-0 pb-6 overflow-hidden"
             key={project.title}
           >
-            <div className="bg-white h-60" />
+            <div className="relative h-60">
+              <Image
+                src={project.coverImage}
+                alt={project.title}
+                fill
+                className="object-cover"
+              />
+            </div>
             <CardContent>
               <h3 className="m-0 p-0 font-bold text-xl">{project.title}</h3>
               <p className="m-0 p-0">{project.description}</p>
@@ -94,13 +105,26 @@ export function Projects() {
               </div>
             </CardContent>
             <CardFooter className="gap-2">
-              <Button variant="secondary">
-                <Github />
-                Demo
-              </Button>
+              {project.isPublic && (
+                <Button variant="secondary">
+                  <Link
+                    href={project.githubLink}
+                    className="flex items-center gap-2"
+                  >
+                    <Github />
+                    <p>Github</p>
+                  </Link>
+                </Button>
+              )}
               <Button>
-                <SquareArrowOutUpRight />
-                Live Demo
+                <Link
+                  href={project.liveLink}
+                  target="_blank"
+                  className="flex items-center gap-2"
+                >
+                  <SquareArrowOutUpRight />
+                  <p>Live Demo</p>
+                </Link>
               </Button>
             </CardFooter>
           </Card>

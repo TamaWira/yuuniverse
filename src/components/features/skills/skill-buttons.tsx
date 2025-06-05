@@ -19,7 +19,7 @@ export function SkillButtons({
           className={cn(
             "w-full hover:bg-[#576856] hover:text-white hover:dark:text-[#576856] hover:dark:bg-white rounded-lg py-1 transition-all font-extralight text-sm md:text-lg",
             {
-              "bg-[#576856] dark:bg-white dark:text-[#576856]":
+              "bg-[#576856] dark:bg-white text-white dark:text-[#576856]":
                 selectedSkill === index,
             }
           )}
