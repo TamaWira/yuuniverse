@@ -40,15 +40,15 @@ export function CTA() {
     >
       <motion.div
         variants={itemVariants}
-        className="bg-[#576856] bg-[url('/texture.png')] bg-cover bg-center p-3 md:p-12 rounded-xl text-white text-center"
+        className="bg-[#576856] bg-[url('/texture.png')] bg-cover bg-center p-3 md:p-12 py-10 md:py-12 rounded-xl text-white text-center"
       >
-        <div className="space-y-10 mx-auto max-w-[70%]">
+        <div className="space-y-10 mx-auto md:max-w-[70%]">
           <Heading>Ready To Build Something Together?</Heading>
-          <p className="font-light text-xl">
+          <p className="font-light text-base md:text-xl">
             Whether you&apos;re looking for a developer, collaborator, or just
             someone to talk ideas with -- I&apos;m open to connect.
           </p>
-          <Button className="bg-white rounded-full text-black">
+          <Button className="bg-white dark:hover:bg-black rounded-full text-black hover:text-white dark:hover:text-white">
             Let&apos;s Connect
           </Button>
         </div>
