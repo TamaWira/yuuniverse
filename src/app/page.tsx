@@ -2,6 +2,7 @@ import AboutMe from "@/components/about-me";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import { Skills } from "@/components/features/skills/skills-section";
+import { Projects } from "@/components/features/projects/projects";
 
 export default function Home() {
   return (
@@ -16,6 +17,12 @@ export default function Home() {
         </div>
         <div className="px-3 md:px-10 py-10">
           <Skills />
+        </div>
+        <div className="flex items-center px-3 md:px-10 py-10 min-h-screen">
+          <Projects />
+        </div>
+        <div className="flex items-center px-3 md:px-10 py-10 min-h-screen">
+          <Projects />
         </div>
       </main>
     </div>
