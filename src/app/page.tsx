@@ -8,13 +8,13 @@ export default function Home() {
     <div className="flex flex-col mx-auto max-w-[1280px] min-h-screen">
       <Navbar />
       <main className="flex flex-col flex-1 gap-13 md:gap-20">
-        <div className="flex flex-col p-2 border h-[calc(100vh-55px)] xl:max-h-[1280px]">
+        <div className="flex flex-col p-2 h-[calc(100vh-55px)] xl:max-h-[1280px]">
           <Hero />
         </div>
-        <div className="flex flex-col justify-center py-3 border min-h-screen">
+        <div className="flex flex-col justify-center py-3 min-h-screen">
           <AboutMe />
         </div>
-        <div className="flex flex-col justify-center px-3 md:px-10 py-10 border min-h-screen">
+        <div className="px-3 md:px-10 py-10">
           <Skills />
         </div>
       </main>
