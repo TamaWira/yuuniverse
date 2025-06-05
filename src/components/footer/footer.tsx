@@ -64,7 +64,7 @@ export function Footer() {
       </ul>
 
       {/* Divider */}
-      <div className="border-[#171D17] border-t-2 w-full" />
+      <div className="border-[#171D17] dark:border-white border-t-2 w-full" />
 
       {/* Copyright */}
       <div className="flex justify-between items-start text-xs md:text-base">
@@ -72,7 +72,7 @@ export function Footer() {
           Heavily inspired by{" "}
           <span>
             <Link
-              className="font-bold text-[#576856] underline"
+              className="font-bold text-[#576856] dark:text-white underline"
               href="https://dribbble.com/shots/24998949-Sivaraga-Mental-Health-Wellness-Landing-Page"
             >
               Arya Pradana&apos;s Sivaraga UI Design
