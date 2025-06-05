@@ -59,7 +59,7 @@ export function Projects() {
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.3 }}
       className="h-full"
     >
       <motion.div variants={itemVariants} className="text-center">
