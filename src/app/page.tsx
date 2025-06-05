@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar";
 import { Skills } from "@/components/features/skills/skills-section";
 import { Projects } from "@/components/features/projects/projects";
 import { CTA } from "@/components/features/cta/cta";
+import { Footer } from "@/components/footer/footer";
 
 export default function Home() {
   return (
@@ -26,6 +27,9 @@ export default function Home() {
           <CTA />
         </div>
       </main>
+      <div className="px-3 md:px-10 py-10">
+        <Footer />
+      </div>
     </div>
   );
 }
