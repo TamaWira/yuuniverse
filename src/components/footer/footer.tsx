@@ -12,16 +12,16 @@ const links = [
     href: "#about-me",
   },
   {
+    name: "Skills",
+    href: "#skills",
+  },
+  {
     name: "Projects",
     href: "#projects",
   },
   {
-    name: "Blog",
-    href: "#blog",
-  },
-  {
     name: "Contact Me",
-    href: "#contact-me",
+    href: "#cta",
   },
 ];
 
@@ -41,13 +41,16 @@ export function Footer() {
           ))}
         </ul>
         <div className="flex gap-2">
-          <Link href="/instagram.com">
+          <Link target="_blank" href="https://www.instagram.com/bayuadhya/">
             <Instagram />
           </Link>
-          <Link href="/linkedin.com">
+          <Link
+            target="_blank"
+            href="https://linkedin.com/in/iputubayuadhyawiratama"
+          >
             <Linkedin />
           </Link>
-          <Link href="/github.com">
+          <Link target="_blank" href="https://github.com/TamaWira">
             <Github />
           </Link>
         </div>

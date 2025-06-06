@@ -29,8 +29,10 @@ export default function TimelineCard({
       )}
 
       {/* Card */}
-      <div className="md:flex-1 justify-center items-center gap-3 grid grid-cols-3 bg-[#F1F1EE] dark:bg-[#576856] mx-10 md:mx-0 p-5 border border-[#576856] dark:border-[#F1F1EE] rounded-lg ring-3 ring-black/5 md:w-full text-left">
-        <Icon className="mx-auto md:mx-0 w-20 md:w-32 h-20 md:h-32" />
+      <div className="md:flex-1 items-center grid grid-cols-3 bg-[#F1F1EE] dark:bg-[#576856] mx-10 md:mx-0 p-5 border border-[#576856] dark:border-[#F1F1EE] rounded-lg ring-3 ring-black/5 md:w-full md:min-h-36 text-left">
+        <div className="flex justify-center">
+          <Icon className="mx-auto md:mx-0 w-14 md:w-20 h-14" />
+        </div>
         <p className="col-span-2 col-start-2 md:font-regular font-extralight text-xs md:text-base">
           {description}
         </p>

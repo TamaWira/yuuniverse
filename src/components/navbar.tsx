@@ -15,6 +15,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 const links = [
   {
@@ -26,16 +27,16 @@ const links = [
     href: "#about-me",
   },
   {
+    name: "Skills",
+    href: "#skills",
+  },
+  {
     name: "Projects",
     href: "#projects",
   },
   {
-    name: "Blog",
-    href: "#blog",
-  },
-  {
     name: "Contact Me",
-    href: "#contact-me",
+    href: "#cta",
   },
 ];
 
@@ -89,9 +90,12 @@ export default function Navbar() {
         <ul className="flex items-center gap-4 p-3 px-5 h-9 text-black dark:text-white">
           {links.map((link) => (
             <li key={link.name}>
-              <a href={link.href} className="hover:text-black transition-all">
+              <Link
+                href={link.href}
+                className="hover:text-black transition-all"
+              >
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

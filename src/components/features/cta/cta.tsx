@@ -3,6 +3,7 @@
 import Heading from "@/components/heading";
 import { Button } from "@/components/ui/button";
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 const itemVariants: Variants = {
   hidden: {
@@ -49,7 +50,12 @@ export function CTA() {
             someone to talk ideas with -- I&apos;m open to connect.
           </p>
           <Button className="bg-white dark:hover:bg-black rounded-full text-black hover:text-white dark:hover:text-white">
-            Let&apos;s Connect
+            <Link
+              target="_blank"
+              href="https://linkedin.com/in/iputubayuadhyawiratama"
+            >
+              Let&apos;s Connect
+            </Link>
           </Button>
         </div>
       </motion.div>

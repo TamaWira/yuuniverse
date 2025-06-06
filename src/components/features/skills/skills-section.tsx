@@ -37,7 +37,7 @@ export function Skills() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.5 }}
-      className="space-y-10 h-full text-center"
+      className="space-y-10 h-full text-center scroll-mt-10"
     >
       <motion.div variants={itemVariants}>
         <Heading variant="h2" className="">

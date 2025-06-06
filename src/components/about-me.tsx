@@ -19,7 +19,7 @@ export default function AboutMe() {
   return (
     <motion.section
       id="about-me"
-      className="relative flex flex-col justify-center gap-3 md:gap-8 h-full text-center"
+      className="relative flex flex-col justify-center gap-3 md:gap-8 h-full text-center scroll-mt-10"
       variants={containerVariants}
       initial="hidden"
       whileInView="show"

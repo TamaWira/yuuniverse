@@ -14,8 +14,21 @@ const projects = [
     coverImage: "/fooloos.png",
     title: "Fooloos | Personal Finance Tracker",
     description:
-      "A full-featured online store with product management, cart functionality, and secure checkout.",
-    stack: ["React", "Next.js"],
+      "A secure, lightweight, and user-friendly personal finance tracker with a sleek and intuitive interface.",
+    stack: [
+      "Next.js",
+      "Typescript",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Vercel",
+      "Express.js",
+      "Prisma ORM",
+      "PostgreSQL",
+      "RESTFul API",
+      "Docker",
+      "Fly.io",
+      "Github Actions",
+    ],
     liveLink: "https://fooloos.vercel.app",
     isPublic: false,
     githubLink: "",
@@ -25,7 +38,19 @@ const projects = [
     title: "Kaboor | Online Travel Agent",
     description:
       "A full-featured online store with product management, cart functionality, and secure checkout.",
-    stack: ["React", "Next.js"],
+    stack: [
+      "React",
+      "Typescript",
+      "Material UI",
+      "Netlify",
+      "Express.js",
+      "Knex.js",
+      "PostgreSQL",
+      "RESTFul API",
+      "Docker",
+      "Fly.io",
+      "Github Actions",
+    ],
     liveLink: "",
     isPublic: true,
     githubLink: "",
@@ -60,11 +85,12 @@ const containerVariants: Variants = {
 export function Projects() {
   return (
     <motion.section
+      id="projects"
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
-      className="h-full"
+      className="h-full scroll-mt-10"
     >
       <motion.div variants={itemVariants} className="text-center">
         <Heading variant="h2">My Work</Heading>
@@ -92,7 +118,7 @@ export function Projects() {
             <CardContent>
               <h3 className="m-0 p-0 font-bold text-xl">{project.title}</h3>
               <p className="m-0 p-0">{project.description}</p>
-              <div className="flex gap-1 mt-2">
+              <div className="flex flex-wrap gap-1 mt-2">
                 {project.stack.map((tool) => (
                   <Badge
                     key={tool}

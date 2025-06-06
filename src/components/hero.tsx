@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import HeroImage from "./hero-image";
 import { motion, Variants } from "framer-motion";
 
@@ -55,7 +56,12 @@ export default function Hero() {
           beautifully.
         </p>
         <button className="bg-white hover:bg-black active:bg-black dark:bg-[#576856] dark:hover:bg-white mt-5 px-3 py-1 border dark:border-white border-black rounded-full ring-2 ring-black/10 hover:text-white active:text-white dark:hover:text-black dark:text-white text-sm lg:text-base transition-all">
-          Contact Me
+          <Link
+            target="_blank"
+            href="https://linkedin.com/in/iputubayuadhyawiratama"
+          >
+            Contact Me
+          </Link>
         </button>
       </motion.div>
     </motion.section>
