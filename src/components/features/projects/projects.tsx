@@ -14,7 +14,7 @@ const projects = [
     coverImage: "/fooloos.png",
     title: "Fooloos | Personal Finance Tracker",
     description:
-      "A full-featured online store with product management, cart functionality, and secure checkout.",
+      "A secure, lightweight, and user-friendly personal finance tracker with a sleek and intuitive interface.",
     stack: [
       "Next.js",
       "Typescript",
