@@ -60,11 +60,12 @@ const containerVariants: Variants = {
 export function Projects() {
   return (
     <motion.section
+      id="projects"
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
-      className="h-full"
+      className="h-full scroll-mt-10"
     >
       <motion.div variants={itemVariants} className="text-center">
         <Heading variant="h2">My Work</Heading>
