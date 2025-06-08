@@ -4,6 +4,7 @@ import Heading from "@/components/heading";
 import { Button } from "@/components/ui/button";
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
+import posthog from "posthog-js";
 
 const itemVariants: Variants = {
   hidden: {
@@ -49,7 +50,12 @@ export function CTA() {
             Whether you&apos;re looking for a developer, collaborator, or just
             someone to talk ideas with -- I&apos;m open to connect.
           </p>
-          <Button className="bg-white dark:hover:bg-black rounded-full text-black hover:text-white dark:hover:text-white">
+          <Button
+            onClick={() => {
+              posthog.capture("$contact");
+            }}
+            className="bg-white dark:hover:bg-black rounded-full text-black hover:text-white dark:hover:text-white"
+          >
             <Link
               target="_blank"
               href="https://linkedin.com/in/iputubayuadhyawiratama"
