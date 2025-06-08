@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Abhaya_Libre, Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-wrapper";
 import "./globals.css";
+import { PostHogProvider } from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,9 +35,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${abhayaLibre.variable} antialiased bg-[#F1F1EE] dark:bg-[#171D17]`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-        </ThemeProvider>
+        <PostHogProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            {children}
+          </ThemeProvider>
+        </PostHogProvider>
       </body>
     </html>
   );
