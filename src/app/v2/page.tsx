@@ -56,12 +56,12 @@ export default function HomePage() {
       <div className="md:px-20">
         <section className="mt-10 md:mt-20 text-black">
           <h2 className="font-bold md:text-[6rem] text-4xl">About Me</h2>
-          <p className="mt-5 md:w-1/2">
+          <p className="mt-5 md:w-1/2 text-black/70">
             I&apos;m a UI/UX Designer and WebFlow Developer based in New York.
             Creating modern, user-friendly websites that bring ideas to life.
           </p>
           <br />
-          <p className="mt-5 md:w-1/2">
+          <p className="mt-5 md:w-1/2 text-black/70">
             I&apos;m currently working at a digital agency creating visuals for
             a well known coffee brand and side hustling as a freelancer ready
             for new challenges.
@@ -69,17 +69,17 @@ export default function HomePage() {
           <div className="flex md:justify-end my-10">
             <div className="flex gap-3 md:gap-10">
               <div>
-                <p className="text-4xl">10+</p>
+                <p className="text-4xl font-semibold">10+</p>
                 <p>Years of experience</p>
               </div>
               <div className="border-black border-l" />
               <div>
-                <p className="text-4xl">280+</p>
+                <p className="text-4xl font-semibold">280+</p>
                 <p>Complete Projects</p>
               </div>
               <div className="border-black border-l" />
               <div>
-                <p className="text-4xl">50+</p>
+                <p className="text-4xl font-semibold">50+</p>
                 <p>Clients on worldwide</p>
               </div>
             </div>
