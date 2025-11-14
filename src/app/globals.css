@@ -16,6 +16,30 @@ button {
   cursor: pointer;
 }
 
+@font-face {
+  font-family: "Specify";
+  src: url("/fonts/specify/SpecifyPERSONAL-ExpBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Specify";
+  src: url("/fonts/specify/SpecifyPERSONAL-ExpBlack.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* @font-face {
+  font-family: "Specify";
+  src: url("/fonts/specify/SpecifyPERSONAL-ExpBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+} */
+
 @theme inline {
   --font-abhaya: var(--font-abhaya-libre);
 }
@@ -47,6 +71,7 @@ button {
   /* Font Families */
   --font-sans: "Inter", system-ui, sans-serif;
   --font-display: "Space Grotesk", sans-serif;
+  --font-specify: "Specify", ui-sans-serif, system-ui, sans-serif;
 
   /* Font Sizes - Display */
   --font-size-display-lg: 4.5rem;
