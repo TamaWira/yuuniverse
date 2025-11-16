@@ -3,6 +3,7 @@
 import Link from "next/link";
 import HeroImage from "./hero-image";
 import { motion, Variants } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 
 const itemVariants: Variants = {
   hidden: {
@@ -35,38 +36,37 @@ export default function Hero() {
       <HeroImage />
 
       {/* Gradient Overlay */}
-      <div className="z-10 absolute inset-0 bg-gradient-to-b from-[#F1F1EE] dark:from-[#171D17] via-white/40 dark:via-black/20 to-transparent h-[70%] pointer-events-none" />
+      <div className="z-20 absolute inset-0 bg-gradient-to-b from-[#F1F1EE] dark:from-[#171D17] via-[#F1F1EE]/70  dark:via-black/20 to-transparent h-[60%] pointer-events-none" />
 
       {/* Content */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="show"
-        className="top-3 md:top-10 lg:top-5 lg:left-1/2 z-20 absolute lg:w-3/4 text-center lg:-translate-x-1/2"
+        className="top-10 md:top-10 lg:top-15 lg:left-1/2 h-full z-20 absolute md:w-4/5 lg:w-3/4 text-center lg:-translate-x-1/2"
       >
         <motion.h1
           variants={itemVariants}
-          className="my-1 font-abhaya font-bold text-3xl lg:text-6xl"
+          className="my-1 font-abhaya font-bold text-4xl md:text-5xl lg:text-[5rem] leading-8 md:leading-14 lg:leading-18 mb-4 lg:mb-2 text-shadow-lg"
         >
           Crafting Code With Purpose, Passion, & Precision
         </motion.h1>
-        <motion.p
-          variants={itemVariants}
-          className="mx-10 font-light text-sm md:text-xl"
-        >
+        <motion.p variants={itemVariants} className="mx-10 text-sm md:text-xl">
           From landing pages to full-stack platforms, I deliver clean code and
           user-centric design. Let&apos;s build something that works —
           beautifully.
         </motion.p>
         <motion.button
           variants={itemVariants}
-          className="bg-white hover:bg-black active:bg-black dark:bg-[#576856] dark:hover:bg-white mt-5 px-3 py-1 border dark:border-white border-black rounded-full ring-2 ring-black/10 hover:text-white active:text-white dark:hover:text-black dark:text-white text-sm lg:text-base transition-all"
+          className="absolute bottom-15 lg:bottom-20 left-0 right-0 w-fit mx-auto"
         >
           <Link
             target="_blank"
             href="https://linkedin.com/in/iputubayuadhyawiratama"
+            className="flex items-center gap-3 bg-white hover:bg-black active:bg-black dark:bg-[#576856] dark:hover:bg-white mt-5 px-5 py-3 border dark:border-white border-black rounded-full ring-2 ring-black/10 hover:text-white active:text-white dark:hover:text-black dark:text-white text-sm lg:text-base transition-all"
           >
-            Contact Me
+            <ExternalLink size={15} />
+            <p>Get in Touch</p>
           </Link>
         </motion.button>
       </motion.div>

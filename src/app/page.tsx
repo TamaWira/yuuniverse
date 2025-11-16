@@ -16,22 +16,16 @@ export default function Home() {
         </div>
         <div className="max-w-[1280px] mx-auto">
           <div className="flex flex-col justify-center py-3 min-h-screen">
-            <AboutMe />
+            {/*<AboutMe />*/}
           </div>
-          <div className="px-3 md:px-10 py-10">
-            <Skills />
-          </div>
+          <div className="px-3 md:px-10 py-10">{/*<Skills />*/}</div>
           <div className="flex items-center px-3 md:px-10 py-10 min-h-screen">
-            <Projects />
+            {/*<Projects />*/}
           </div>
-          <div className="px-3 md:px-10 py-10">
-            <CTA />
-          </div>
+          <div className="px-3 md:px-10 py-10">{/*<CTA />*/}</div>
         </div>
       </main>
-      <div className="px-3 md:px-10 py-10">
-        <Footer />
-      </div>
+      <div className="px-3 md:px-10 py-10">{/*<Footer />*/}</div>
     </div>
   );
 }
