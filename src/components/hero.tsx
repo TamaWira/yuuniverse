@@ -58,15 +58,18 @@ export default function Hero() {
         </motion.p>
         <motion.button
           variants={itemVariants}
-          className="absolute bottom-15 lg:bottom-20 left-0 right-0 w-fit mx-auto"
+          className="absolute bottom-15 lg:bottom-20 left-0 right-0 mx-auto md:w-3/4"
         >
           <Link
             target="_blank"
             href="https://linkedin.com/in/iputubayuadhyawiratama"
-            className="flex items-center gap-3 bg-white hover:bg-black active:bg-black dark:bg-[#576856] dark:hover:bg-white mt-5 px-5 py-3 border dark:border-white border-black rounded-full ring-2 ring-black/10 hover:text-white active:text-white dark:hover:text-black dark:text-white text-sm lg:text-base transition-all"
+            className="flex justify-between items-center gap-3 bg-white hover:bg-black active:bg-black dark:bg-[#576856] dark:hover:bg-white mt-5 p-1 dark:border-white rounded-full hover:text-white active:text-white dark:hover:text-black dark:text-white text-sm lg:text-base transition-all"
           >
-            <ExternalLink size={15} />
+            <div className="h-10 w-10" />
             <p>Get in Touch</p>
+            <div className="h-10 w-10 rounded-full bg-primary-500 flex items-center justify-center text-white">
+              <ExternalLink size={15} />
+            </div>
           </Link>
         </motion.button>
       </motion.div>
