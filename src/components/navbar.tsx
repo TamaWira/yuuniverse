@@ -15,7 +15,6 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Menu, X } from "lucide-react";
-import Link from "next/link";
 
 const links = [
   {
