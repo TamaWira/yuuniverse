@@ -8,23 +8,25 @@ import { Footer } from "@/components/footer/footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col mx-auto max-w-[1280px] min-h-screen">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex flex-col flex-1 gap-13 md:gap-20">
-        <div className="flex flex-col p-2 h-[calc(100vh-55px)] xl:max-h-[1280px]">
+        <div className="flex flex-col p-2 h-[calc(100vh-55px)]">
           <Hero />
         </div>
-        <div className="flex flex-col justify-center py-3 min-h-screen">
-          <AboutMe />
-        </div>
-        <div className="px-3 md:px-10 py-10">
-          <Skills />
-        </div>
-        <div className="flex items-center px-3 md:px-10 py-10 min-h-screen">
-          <Projects />
-        </div>
-        <div className="px-3 md:px-10 py-10">
-          <CTA />
+        <div className="max-w-[1280px] mx-auto">
+          <div className="flex flex-col justify-center py-3 min-h-screen">
+            <AboutMe />
+          </div>
+          <div className="px-3 md:px-10 py-10">
+            <Skills />
+          </div>
+          <div className="flex items-center px-3 md:px-10 py-10 min-h-screen">
+            <Projects />
+          </div>
+          <div className="px-3 md:px-10 py-10">
+            <CTA />
+          </div>
         </div>
       </main>
       <div className="px-3 md:px-10 py-10">

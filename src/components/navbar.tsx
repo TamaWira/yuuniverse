@@ -82,12 +82,11 @@ export default function Navbar() {
 
       <div className="z-[70] flex items-center gap-3">
         <Logo />
-        <p className="font-bold text-base md:text-xl">YuuNiverse</p>
       </div>
 
       {/* Desktop Navigation */}
       <nav className="hidden z-[70] md:flex items-center gap-3">
-        <ul className="flex items-center gap-4 p-3 px-5 h-9 text-black dark:text-white">
+        {/*<ul className="flex items-center gap-4 p-3 px-5 h-9 text-black dark:text-white">
           {links.map((link) => (
             <li key={link.name}>
               <Link
@@ -98,7 +97,7 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
-        </ul>
+        </ul>*/}
         <ThemeToggle />
       </nav>
 
