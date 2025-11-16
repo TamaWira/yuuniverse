@@ -7,29 +7,29 @@ export function V2Hero() {
         src="/portrait.webp"
         alt="Portrait of Janice"
         width={1000}
-        height={1000}
+        height={1500}
         className="w-full"
       />
 
       <svg
         className="z-10 absolute inset-0 w-full h-full pointer-events-none"
-        viewBox="0 0 1200 600"
+        viewBox="0 0 1200 1800"
         preserveAspectRatio="xMidYMid slice"
         aria-hidden="true"
       >
         <defs>
           <mask id="cutout-mask">
-            <rect x="0" y="0" width="1200" height="600" fill="white" />
+            <rect x="0" y="0" width="1200" height="1800" fill="white" />
             <text
               x="50%"
-              y="85"
-              fontSize="92"
+              y="250"
+              fontSize="277.5"
               fontWeight="900"
               fontFamily="Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, Arial"
               fill="black"
               textAnchor="middle"
               dominantBaseline="middle"
-              letterSpacing="-6"
+              letterSpacing="-12"
             >
               Wiratama
             </text>
@@ -39,7 +39,7 @@ export function V2Hero() {
           x="0"
           y="0"
           width="1200"
-          height="100"
+          height="300"
           fill="#eaeae3"
           mask="url(#cutout-mask)"
         />

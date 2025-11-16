@@ -7,18 +7,23 @@ import { SectionSeparator } from "@/components/ui/section-separator";
 
 export default function HomePage() {
   return (
-    <div className="bg-cream-200 p-4 md:p-10 min-h-screen">
-      <V2Navbar />
-      <V2Hero />
+    <>
+      <main>
+        <div className="bg-cream-200 p-4 md:p-10 min-h-screen">
+          <V2Navbar />
+          <V2Hero />
 
-      <div className="space-y-14 md:space-y-40">
-        <V2AboutMe />
-        <SectionSeparator />
-        <RecentWork />
-        <SectionSeparator />
-        <MyServices />
-        <SectionSeparator />
-      </div>
-    </div>
+          <div className="space-y-14 md:space-y-40">
+            <V2AboutMe />
+            <SectionSeparator />
+            <RecentWork />
+            <SectionSeparator />
+            <MyServices />
+            <SectionSeparator />
+          </div>
+        </div>
+      </main>
+      <footer className="bg-primary-500 w-full h-20 text-white"></footer>
+    </>
   );
 }
