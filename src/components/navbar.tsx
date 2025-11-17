@@ -39,7 +39,7 @@ const links = [
   },
 ];
 
-export default function Navbar() {
+export function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 

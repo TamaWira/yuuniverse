@@ -1,10 +1,5 @@
-import AboutMe from "@/components/about-me";
-import Hero from "@/components/hero";
-import Navbar from "@/components/navbar";
-import { Skills } from "@/components/features/skills/skills-section";
-import { Projects } from "@/components/features/projects/projects";
-import { CTA } from "@/components/features/cta/cta";
-import { Footer } from "@/components/footer/footer";
+import { Hero } from "@/components/hero";
+import { Navbar } from "@/components/navbar";
 
 export default function Home() {
   return (

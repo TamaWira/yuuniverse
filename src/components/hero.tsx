@@ -30,7 +30,7 @@ const containerVariants: Variants = {
   },
 };
 
-export default function Hero() {
+export function Hero() {
   return (
     <section className="relative flex flex-1 justify-center rounded-b-xl w-full h-full overflow-hidden">
       <HeroImage />
@@ -63,7 +63,7 @@ export default function Hero() {
           <Link
             target="_blank"
             href="https://linkedin.com/in/iputubayuadhyawiratama"
-            className="flex justify-between items-center gap-3 bg-white hover:bg-black active:bg-black dark:bg-[#576856] dark:hover:bg-white mt-5 p-1 dark:border-white rounded-full hover:text-white active:text-white dark:hover:text-black dark:text-white text-sm lg:text-base transition-all"
+            className="flex justify-between items-center gap-3 bg-white/70 hover:bg-white active:bg-white dark:bg-[#576856] dark:hover:bg-white mt-5 p-1 dark:border-white rounded-full dark:hover:text-black dark:text-white text-sm lg:text-base transition-all"
           >
             <div className="h-10 w-10" />
             <p>Get in Touch</p>

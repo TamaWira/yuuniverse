@@ -1,8 +1,8 @@
+import "../styles/globals.css";
 import type { Metadata } from "next";
 import { Abhaya_Libre, Geist, Geist_Mono } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-wrapper";
-import "./globals.css";
 import { PostHogProvider } from "./providers";
+import { ThemeProvider } from "@/components/theme-wrapper";
 import LenisProvider from "@/components/providers/lenis-provider";
 
 const geistSans = Geist({
