@@ -1,25 +1,21 @@
 export function RecentWork() {
   return (
     <section className="mt-10 md:mt-20 text-black">
-      <div className="md:px-28">
-        <h2 className="font-specify font-black md:text-[6rem] text-4xl">
-          Recent Work
-        </h2>
-        <p className="mt-5 md:w-1/2 text-black/70 md:text-xl text-justify">
-          Whether you need a striking portfolio, a functional website, or a
-          custom solution, I&apos;m here to deliver results that align with your
-          vision.
-        </p>
-      </div>
-
-      <div className="h-28 bg-black my-10" />
-
-      <div className="md:px-28">
-        <p className="mt-5 text-black/70 md:text-xl text-center w-1/2 mx-auto">
-          Whether you need a striking portfolio, a functional website, or a
-          custom solution, I&apos;m here to deliver results that align with your
-          vision.
-        </p>
+      <h2 className="font-abhaya text-[3.5rem] font-bold leading-14">
+        Products I&apos;ve built.
+        <br />
+        Problems I&apos;ve solved.
+      </h2>
+      <p className="text-black/70 max-w-1/2">
+        A curated collection of the work I've built—highlighting the ideas,
+        products, and experiments that shaped my journey. The biggest tile
+        features my most impactful project so far.
+      </p>
+      <div className="mt-10 grid grid-cols-6 grid-rows-4 h-[500px] gap-6">
+        <div className="col-span-4 row-span-4 border rounded-xl"></div>
+        <div className="col-span-2 row-span-2 border rounded-xl"></div>
+        <div className="col-span-2 row-span-1 border rounded-xl"></div>
+        <div className="col-span-2 row-span-1 border rounded-xl"></div>
       </div>
     </section>
   );

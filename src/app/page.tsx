@@ -1,4 +1,5 @@
 import { V2AboutMe } from "@/components/features/v2/about-me";
+import { RecentWork } from "@/components/features/v2/recent-work";
 import { Hero } from "@/components/hero";
 import { Navbar } from "@/components/navbar";
 
@@ -12,6 +13,7 @@ export default function Home() {
         </div>
         <div className="max-w-[1280px] mx-auto w-full">
           <V2AboutMe />
+          <RecentWork />
           <div className="px-3 md:px-10 py-10">{/*<Skills />*/}</div>
           <div className="flex items-center px-3 md:px-10 py-10 min-h-screen">
             {/*<Projects />*/}
