@@ -5,7 +5,7 @@ type Props = {
 export function HorizontalLine({ type = "basic" }: Props) {
   return (
     <div
-      className={`border-black border-b w-full ${
+      className={`border-black/10 border-b-2 w-full ${
         type === "dashed" && "border-dashed"
       }`}
     />
