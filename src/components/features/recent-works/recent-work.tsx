@@ -1,6 +1,6 @@
-import { Github } from "@/components/icons/github";
-import { Polaroid } from "./polaroid";
 import Image from "next/image";
+import { Github } from "@/components/icons/github";
+import { Polaroid } from "@/components/ui/polaroid";
 import { MoveUpRight } from "@/components/icons/move-up-right";
 
 export function RecentWork() {

@@ -5,7 +5,7 @@ import { MoveRight } from "@/components/icons/move-right";
 import { HorizontalLine } from "@/components/ui/horizontal-line";
 import Image from "next/image";
 
-export function V2AboutMe() {
+export function AboutMe() {
   return (
     <section className="mt-10 md:mt-20 text-black flex gap-20">
       <div className="flex-1">

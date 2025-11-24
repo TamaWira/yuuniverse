@@ -1,7 +1,7 @@
-import { V2AboutMe } from "@/components/features/v2/about-me";
-import { RecentWork } from "@/components/features/v2/recent-work";
-import { Hero } from "@/components/hero";
-import { Navbar } from "@/components/navbar";
+import { AboutMe } from "@/components/features/about-me/about-me";
+import { RecentWork } from "@/components/features/recent-works/recent-work";
+import { Hero } from "@/components/features/hero/hero";
+import { Navbar } from "@/components/layout/navbar";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
           <Hero />
         </div>
         <div className="mx-auto w-full max-w-[1280px]">
-          <V2AboutMe />
+          <AboutMe />
           <RecentWork />
         </div>
       </main>

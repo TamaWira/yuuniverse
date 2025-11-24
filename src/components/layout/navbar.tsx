@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Logo from "./logo";
-import MobileThemeToggle from "./mobile-theme-toggle";
-import ThemeToggle from "./theme-toggle";
+import Logo from "../ui/logo";
+import MobileThemeToggle from "../layout/mobile-theme-toggle";
+import ThemeToggle from "../layout/theme-toggle";
 
 import {
   Drawer,
