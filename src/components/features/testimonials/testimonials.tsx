@@ -4,7 +4,6 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { Quote } from "lucide-react";
-import Image from "next/image";
 
 const testimonials = [
   {
