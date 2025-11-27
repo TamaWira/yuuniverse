@@ -1,5 +1,5 @@
 import { Instagram, Linkedin, Github } from "lucide-react";
-import Logo from "../logo";
+import Logo from "@/components/ui/logo";
 import Link from "next/link";
 
 const links = [
@@ -12,12 +12,16 @@ const links = [
     href: "#about-me",
   },
   {
-    name: "Skills",
-    href: "#skills",
+    name: "Services",
+    href: "#services",
   },
   {
     name: "Projects",
     href: "#projects",
+  },
+  {
+    name: "Testimonials",
+    href: "#testimonials",
   },
   {
     name: "Contact Me",
@@ -56,7 +60,7 @@ export function Footer() {
         </div>
       </div>
 
-      <ul className="md:hidden flex justify-between items-center gap-4 h-9 text-black dark:text-white">
+      <ul className="md:hidden grid grid-cols-3 gap-y-2 gap-x-4 text-sm text-black dark:text-white">
         {links.map((link) => (
           <li key={link.name}>
             <a href={link.href} className="hover:text-black transition-all">
@@ -70,8 +74,8 @@ export function Footer() {
       <div className="border-[#171D17] dark:border-white border-t-2 w-full" />
 
       {/* Copyright */}
-      <div className="flex justify-between items-start text-xs md:text-base">
-        <p className="max-w-[50%] md:max-w-full">
+      <div className="flex flex-col md:flex-row justify-between items-start gap-4 text-xs md:text-base">
+        <p className="max-w-full md:max-w-[50%]">
           Heavily inspired by{" "}
           <span>
             <Link

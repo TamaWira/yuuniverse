@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Logo from "../ui/logo";
-import MobileThemeToggle from "../layout/mobile-theme-toggle";
-import ThemeToggle from "../layout/theme-toggle";
 
 import {
   Drawer,
@@ -42,7 +40,9 @@ const links = [
 export function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [activeSection, setActiveSection] = useState("home");
 
+  // Track scroll direction for navbar visibility
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
@@ -65,6 +65,38 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
+  // Track active section with Intersection Observer
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "-50% 0px -50% 0px",
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    // Observe all sections
+    const sections = document.querySelectorAll(
+      "#home, #about-me, #skills, #projects, #cta"
+    );
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
   return (
     <header
       className={`sticky overflow-hidden top-0 z-50 flex justify-between items-center p-2 px-5 transition-transform duration-300 ${
@@ -85,19 +117,25 @@ export function Navbar() {
 
       {/* Desktop Navigation */}
       <nav className="hidden z-[70] md:flex items-center gap-3">
-        {/*<ul className="flex items-center gap-4 p-3 px-5 h-9 text-black dark:text-white">
-          {links.map((link) => (
-            <li key={link.name}>
-              <Link
-                href={link.href}
-                className="hover:text-black transition-all"
-              >
-                {link.name}
-              </Link>
-            </li>
-          ))}
-        </ul>*/}
-        <ThemeToggle />
+        <ul className="flex items-center gap-4 p-3 px-5 h-9 text-black">
+          {links.map((link) => {
+            const isActive = activeSection === link.href.substring(1);
+            return (
+              <li key={link.name}>
+                <a
+                  href={link.href}
+                  className={`transition-all text-sm font-medium ${
+                    isActive
+                      ? "text-black font-bold border-b-2 border-black"
+                      : "text-black/60 hover:text-black"
+                  }`}
+                >
+                  {link.name}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
       </nav>
 
       {/* Mobile Navigation */}
@@ -138,13 +176,6 @@ export function Navbar() {
                   </li>
                 ))}
               </ul>
-
-              <div className="my-3 border-b" />
-
-              <div className="flex items-center gap-3">
-                <p>Theme</p>
-                <MobileThemeToggle />
-              </div>
             </div>
           </DrawerContent>
         </Drawer>

@@ -6,18 +6,18 @@ import { MoveUpRight } from "@/components/icons/move-up-right";
 export function RecentWork() {
   return (
     <section className="mt-10 md:mt-20 text-black">
-      <h2 className="font-abhaya font-bold text-[3.5rem] leading-14">
+      <h2 className="font-abhaya font-bold text-4xl md:text-5xl lg:text-[3.5rem] leading-tight md:leading-14">
         Products I&apos;ve built.
         <br />
         Problems I&apos;ve solved.
       </h2>
-      <p className="max-w-1/2 text-black/70">
+      <p className="text-black/70">
         A curated collection of the work I&apos;ve built—highlighting the ideas,
         products, and experiments that shaped my journey. The biggest tile
         features my most impactful project so far.
       </p>
-      <div className="gap-6 grid grid-cols-6 grid-rows-2 mt-10">
-        <div className="col-span-4 row-span-2">
+      <div className="gap-6 grid grid-cols-2 lg:grid-cols-6 lg:grid-rows-2 mt-10">
+        <div className="col-span-2 lg:col-span-4 lg:row-span-2">
           <div className="space-y-5">
             <Polaroid>
               <Image
@@ -47,7 +47,7 @@ export function RecentWork() {
             </div>
           </div>
         </div>
-        <div className="col-span-2 row-span-1">
+        <div className="col-span-1 lg:col-span-2 lg:row-span-1">
           <div className="space-y-5">
             <Polaroid>
               <Image
@@ -67,7 +67,7 @@ export function RecentWork() {
             </div>
           </div>
         </div>
-        <div className="col-span-2 row-span-1">
+        <div className="col-span-1 lg:col-span-2 lg:row-span-1">
           <div className="space-y-5">
             <Polaroid>
               <Image

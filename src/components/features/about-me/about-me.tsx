@@ -7,8 +7,8 @@ import Image from "next/image";
 
 export function AboutMe() {
   return (
-    <section className="mt-10 md:mt-20 text-black flex gap-20">
-      <div className="flex-1">
+    <section className="mt-10 md:mt-20 text-black grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
+      <div className="order-2 lg:order-1 lg:row-span-2">
         <div className="w-full h-[400px] ring ring-black/5 shadow-lg -rotate-1 rounded-xl p-3 overflow-hidden">
           <div className="w-full h-full overflow-hidden rounded-lg">
             <Image
@@ -32,11 +32,10 @@ export function AboutMe() {
           </div>
         </div>
       </div>
-      <div className="flex-1 flex flex-col">
-        <h2 className="font-abhaya text-[3.5rem] font-bold leading-14">
+      <h2 className="order-1 lg:order-2 font-abhaya text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-tight lg:leading-14">
           Hi, I&apos;m Bayu - A Builder With a Clear Design Sense
         </h2>
-        <div className="mt-4 flex-1 flex flex-col justify-between">
+        <div className="order-3 lg:order-3 mt-4 flex flex-col justify-between">
           <p className="text-black/70">
             I&apos;m a full-stack engineer who loves creating seamless digital
             experiences. I work across the stack—from crafting responsive,
@@ -82,7 +81,6 @@ export function AboutMe() {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 }
